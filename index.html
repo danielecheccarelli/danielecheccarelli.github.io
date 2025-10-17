@@ -23,68 +23,75 @@
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
   .container{max-width:1000px;margin:0 auto;padding:0 20px}
   .skip-link{position:absolute;left:-9999px}.skip-link:focus{left:16px;top:16px;background:#000;color:#fff;padding:8px 12px;border-radius:6px;z-index:1000}
+
+  /* Header */
   .site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:10}
   .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
   .brand-title{display:block;font-weight:700}
   .brand-subtitle{display:block;color:var(--muted);font-size:0.95rem}
   .nav{list-style:none;margin:0;padding:0;display:flex;gap:18px}
   .nav a{text-decoration:none;color:var(--text)}
-  .nav a:hover{color:var(--primary)}
+  .nav a:hover{color:var(--primary)} 
+
+  /* Hero */
   .hero{background:linear-gradient(135deg,#eaf2ff 0%,#ffffff 60%);padding:56px 0 40px;border-bottom:1px solid var(--border)}
   .hero h1{font-size:2rem;margin:0 0 10px}
-  .lead{font-size:1.1rem;color:var(--muted);max-width:800px}
+  .lead{font-size:1.1rem;color:var(--muted);max-width:800px} 
+
+  /* Sections */
   .section{padding:44px 0}
   .section.alt{background:var(--surface)}
   h2{margin:0 0 14px;font-size:1.5rem}
   .check{padding-left:18px}
-  .check li{margin:8px 0}
+  .check li{margin:8px 0} 
+
+  /* Cards */
   .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
   .card{grid-column:span 12;background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px;box-shadow:var(--shadow)}
   .card h3{margin:0 0 6px}
   .place{color:var(--muted);margin:0 0 10px}
   .link{color:var(--primary);text-decoration:none}
-  .link:hover{text-decoration:underline}
+  .link:hover{text-decoration:underline} 
+
+  /* Legal & footer */
   .legal .small{font-size:0.9rem;color:var(--muted)}
   .site-footer{border-top:1px solid var(--border);padding:16px 0;background:#fff}
-  .site-footer p{margin:0;color:var(--muted)}
-  .profile{margin:18px 0}
-  .profile img{max-width:180px;border-radius:12px;border:1px solid var(--border)}
+  .site-footer p{margin:0;color:var(--muted)} 
 
-  /* Migliorie mobile per header e menu /
+  /* Immagine profilo (se usata altrove) */
+  .profile{margin:18px 0}
+  .profile img{max-width:180px;border-radius:12px;border:1px solid var(--border)} 
+
+  /* Immagini responsive */
+  img{max-width:100%;height:auto} 
+
+  /* Evita che le ancore finiscano sotto l’header sticky */
+  section[id], h2 { scroll-margin-top: 80px; } 
+
+  /* Spazi e layout mobile dell’header per evitare sovrapposizioni */
   html { -webkit-text-size-adjust: 100%; }
   @media (max-width: 640px){
     .site-header .header-inner{ padding:10px 0; }
     .header-inner{ flex-wrap: wrap; gap:8px; align-items:flex-start; }
     .brand{ flex:1 1 100%; }
     .brand-title{ font-size:1.05rem; line-height:1.25; }
-    .brand-subtitle{ font-size:0.9rem; line-height:1.25; }
+    .brand-subtitle{ font-size:0.9rem; line-height:1.25; margin-top:2px; }
     nav{ width:100%; }
     .nav{
       flex-wrap: wrap;
       justify-content:flex-start;
-      gap:10px 16px; / righe/colonne */
-      padding-top:4px;
+      gap:10px 16px;
+      padding-top:6px;
+      border-top:1px solid var(--border);
     }
     .nav a{ font-size:0.95rem; padding:6px 0; display:inline-block; }
-  } 
-
-  /* Evita che le ancore finiscano sotto l’header sticky */
-  section[id], h2 { scroll-margin-top: 80px; } 
-
-  /* Immagini responsive */
-  img{ max-width:100%; height:auto; } 
-
-  /* Spazio sicuro sui telefoni con notch /
-  @media (max-width: 640px){
     .site-header .container{
-      padding-left: 28px; / aumenta o riduci a piacere (24–32px) */
-      padding-right: 24px;
-      padding-left: max(28px, env(safe-area-inset-left));
-      padding-right: max(24px, env(safe-area-inset-right));
+      padding-left: max(20px, env(safe-area-inset-left));
+      padding-right: max(20px, env(safe-area-inset-right));
     }
   } 
 
-  /* Layout hero con foto in alto /
+  /* Layout hero con foto a destra */
   .hero .hero-flex{
     display:grid; grid-template-columns:1fr; align-items:center; gap:16px;
   }
@@ -95,13 +102,10 @@
   @media (min-width:720px){
     .hero .hero-flex{ grid-template-columns:1.5fr 1fr; }
     .hero-photo{ justify-self:end; }
+    .hero h1{ font-size:2.2rem; }
   }
-  / Foto più piccola su desktop /
-  @media (min-width: 720px){
-    .hero-photo img{ width: 180px; } / tablet /
-  }
-  @media (min-width: 1024px){
-    .hero-photo img{ width: 160px; } / desktop */
+  @media (min-width:1024px){
+    .hero-photo img{ width:160px; }
   }
   </style> 
 </head>
@@ -134,7 +138,6 @@
             <p class="lead">
               Valutazione e trattamento conservativo di deformità e algie vertebrali, prescrizione di ortesi (corsetti/busti, plantari) e percorsi di riabilitazione ortopedica e sportiva.
             </p>
-            <p>Per appuntamenti ed informazioni: <a href="mailto:daniele.checcarelli@libero.it">daniele.checcarelli@libero.it</a></p>
           </div>
           <figure class="hero-photo">
             <img src="/images/ritratto.jpg"
