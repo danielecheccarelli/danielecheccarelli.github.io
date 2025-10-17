@@ -10,30 +10,38 @@
   <meta property="og:description" content="Fisiatra a Foligno, Trevi e Civitanova Marche. Trattamenti conservativi, ortesi e riabilitazione.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="it_IT">
+  <meta property="og:url" content="https://danielecheccarelli.it/">
+  <link rel="canonical" href="https://danielecheccarelli.it/">
   <style>
   :root{
     --bg:#ffffff;--text:#1b1f23;--muted:#5f6b76;
     --primary:#1b6eea;--primary-700:#1559be;--surface:#f6f8fa;--border:#e5e7eb;
     --shadow:0 4px 20px rgba(0,0,0,0.06)
   }
-  *{box-sizing:border-box}html,body{margin:0;padding:0}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
   .container{max-width:1000px;margin:0 auto;padding:0 20px}
   .skip-link{position:absolute;left:-9999px}.skip-link:focus{left:16px;top:16px;background:#000;color:#fff;padding:8px 12px;border-radius:6px;z-index:1000}
   .site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:10}
   .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-  .brand-title{display:block;font-weight:700}.brand-subtitle{display:block;color:var(--muted);font-size:0.95rem}
+  .brand-title{display:block;font-weight:700}
+  .brand-subtitle{display:block;color:var(--muted);font-size:0.95rem}
   .nav{list-style:none;margin:0;padding:0;display:flex;gap:18px}
-  .nav a{text-decoration:none;color:var(--text)}.nav a:hover{color:var(--primary)}
+  .nav a{text-decoration:none;color:var(--text)}
+  .nav a:hover{color:var(--primary)}
   .hero{background:linear-gradient(135deg,#eaf2ff 0%,#ffffff 60%);padding:56px 0 40px;border-bottom:1px solid var(--border)}
-  .hero h1{font-size:2rem;margin:0 0 10px}.lead{font-size:1.1rem;color:var(--muted);max-width:800px}
-  .btn{display:inline-block;background:var(--primary);color:#fff;text-decoration:none;padding:10px 16px;border-radius:8px;margin-top:16px;box-shadow:var(--shadow)}
-  .btn:hover{background:var(--primary-700)}
-  .section{padding:44px 0}.section.alt{background:var(--surface)}
-  h2{margin:0 0 14px;font-size:1.5rem}.check{padding-left:18px}.check li{margin:8px 0}
+  .hero h1{font-size:2rem;margin:0 0 10px}
+  .lead{font-size:1.1rem;color:var(--muted);max-width:800px}
+  .section{padding:44px 0}
+  .section.alt{background:var(--surface)}
+  h2{margin:0 0 14px;font-size:1.5rem}
+  .check{padding-left:18px}
+  .check li{margin:8px 0}
   .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
   .card{grid-column:span 12;background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px;box-shadow:var(--shadow)}
-  .card h3{margin:0 0 6px}.place{color:var(--muted);margin:0 0 10px}
+  .card h3{margin:0 0 6px}
+  .place{color:var(--muted);margin:0 0 10px}
   .link{color:var(--primary);text-decoration:none}
   .link:hover{text-decoration:underline}
   .legal .small{font-size:0.9rem;color:var(--muted)}
@@ -41,67 +49,61 @@
   .site-footer p{margin:0;color:var(--muted)}
   .profile{margin:18px 0}
   .profile img{max-width:180px;border-radius:12px;border:1px solid var(--border)}
-  .hidden{display:none}
-  @media (min-width:720px){.hero h1{font-size:2.4rem}.cards .card{grid-column:span 4}}
-/* Migliorie mobile per header e menu */
-html { -webkit-text-size-adjust: 100%; }
 
-@media (max-width: 640px){
-.site-header .header-inner{ padding:10px 0; }
-.header-inner{ flex-wrap: wrap; gap:8px; align-items:flex-start; }
-.brand{ flex:1 1 100%; }
-.brand-title{ font-size:1.05rem; line-height:1.25; }
-.brand-subtitle{ font-size:0.9rem; line-height:1.25; }
+  /* Migliorie mobile per header e menu /
+  html { -webkit-text-size-adjust: 100%; }
+  @media (max-width: 640px){
+    .site-header .header-inner{ padding:10px 0; }
+    .header-inner{ flex-wrap: wrap; gap:8px; align-items:flex-start; }
+    .brand{ flex:1 1 100%; }
+    .brand-title{ font-size:1.05rem; line-height:1.25; }
+    .brand-subtitle{ font-size:0.9rem; line-height:1.25; }
+    nav{ width:100%; }
+    .nav{
+      flex-wrap: wrap;
+      justify-content:flex-start;
+      gap:10px 16px; / righe/colonne */
+      padding-top:4px;
+    }
+    .nav a{ font-size:0.95rem; padding:6px 0; display:inline-block; }
+  } 
 
-nav{ width:100%; }
-.nav{
-flex-wrap: wrap;
-justify-content:flex-start;
-gap:10px 16px; /* righe/colonne */
-padding-top:4px;
-}
-.nav a{ font-size:0.95rem; padding:6px 0; display:inline-block; }
-}
+  /* Evita che le ancore finiscano sotto l’header sticky */
+  section[id], h2 { scroll-margin-top: 80px; } 
 
-/* Evita che i link-ancora finiscano sotto l’header sticky */
-section[id], h2 { scroll-margin-top: 80px; }
+  /* Immagini responsive */
+  img{ max-width:100%; height:auto; } 
 
-/* Assicurati che le immagini non deformino il layout */
-img{ max-width:100%; height:auto; }
-@media (max-width: 640px){
-.site-header .container{
-padding-left: 28px; /* aumenta o riduci a piacere (24–32px) /
-padding-right: 24px;
-}
-/ Per iPhone con notch: rispetta l’area sicura, opzionale */
-.site-header .container{
-padding-left: max(28px, env(safe-area-inset-left));
-padding-right: max(24px, env(safe-area-inset-right));
-}
-}
-/* Layout hero con foto in alto */
-.hero .hero-flex{
-display:grid; grid-template-columns:1fr; align-items:center; gap:16px;
-}
-.hero-photo img{
-width:200px; max-width:40vw; height:auto;
-border-radius:12px; border:1px solid var(--border); box-shadow:var(--shadow);
-}
-@media (min-width:720px){
-.hero .hero-flex{ grid-template-columns:1.5fr 1fr; }
-.hero-photo{ justify-self:end; }
-}
-/* Foto più piccola su desktop /
-@media (min-width: 720px){
-.hero-photo img{ width: 180px; } / tablet /
-}
-@media (min-width: 1024px){
-.hero-photo img{ width: 160px; } / desktop */
-}
-.faq dt{font-weight:600;margin-top:12px}
-.faq dd{margin:4px 0 12px 0}
-.btn{display:none !important}
-  </style>
+  /* Spazio sicuro sui telefoni con notch /
+  @media (max-width: 640px){
+    .site-header .container{
+      padding-left: 28px; / aumenta o riduci a piacere (24–32px) */
+      padding-right: 24px;
+      padding-left: max(28px, env(safe-area-inset-left));
+      padding-right: max(24px, env(safe-area-inset-right));
+    }
+  } 
+
+  /* Layout hero con foto in alto /
+  .hero .hero-flex{
+    display:grid; grid-template-columns:1fr; align-items:center; gap:16px;
+  }
+  .hero-photo img{
+    width:200px; max-width:40vw; height:auto;
+    border-radius:12px; border:1px solid var(--border); box-shadow:var(--shadow);
+  }
+  @media (min-width:720px){
+    .hero .hero-flex{ grid-template-columns:1.5fr 1fr; }
+    .hero-photo{ justify-self:end; }
+  }
+  / Foto più piccola su desktop /
+  @media (min-width: 720px){
+    .hero-photo img{ width: 180px; } / tablet /
+  }
+  @media (min-width: 1024px){
+    .hero-photo img{ width: 160px; } / desktop */
+  }
+  </style> 
 </head>
 <body>
   <a class="skip-link" href="#contenuto">Salta al contenuto</a>
@@ -125,24 +127,23 @@ border-radius:12px; border:1px solid var(--border); box-shadow:var(--shadow);
 
   <main id="contenuto">
     <section class="hero">
-<div class="container">
-<div class="hero-flex">
-<div class="hero-text">
-<h1>Medico Fisiatra</h1>
-<p class="lead">
-Valutazione e trattamento conservativo di deformità e algie vertebrali, prescrizione di ortesi (corsetti/busti, plantari) e percorsi di riabilitazione ortopedica e sportiva.
-</p>
-<p>Per appuntamenti ed informazioni: <a href="mailto:daniele.checcarelli@libero.it">daniele.checcarelli@libero.it</a></p>
-<p><a class="btn" href="mailto:daniele.checcarelli@libero.it">Scrivimi</a></p>
-</div>
-<figure class="hero-photo">
-<img src="/images/ritratto.jpg"
-alt="Ritratto del Dott. Daniele Checcarelli Petrucci"
-width="800" height="1000" loading="lazy" decoding="async">
-</figure>
-</div>
-</div>
-</section>
+      <div class="container">
+        <div class="hero-flex">
+          <div class="hero-text">
+            <h1>Medico Fisiatra</h1>
+            <p class="lead">
+              Valutazione e trattamento conservativo di deformità e algie vertebrali, prescrizione di ortesi (corsetti/busti, plantari) e percorsi di riabilitazione ortopedica e sportiva.
+            </p>
+            <p>Per appuntamenti ed informazioni: <a href="mailto:daniele.checcarelli@libero.it">daniele.checcarelli@libero.it</a></p>
+          </div>
+          <figure class="hero-photo">
+            <img src="/images/ritratto.jpg"
+                 alt="Ritratto del Dott. Daniele Checcarelli Petrucci"
+                 width="800" height="1000" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
 
 <section id="chi-sono" class="section">
   <div class="container">
@@ -195,21 +196,12 @@ width="800" height="1000" loading="lazy" decoding="async">
   <div class="container">
     <h2>Contatti</h2>
     <p>Email: <a href="mailto:daniele.checcarelli@libero.it">daniele.checcarelli@libero.it</a></p>
+    <p>Non fornisco un numero telefonico su questo sito.</p>
   </div>
 </section>
 
 <section class="section legal">
   <div class="container">
-
-<section id="faq" class="section">
-<div class="container">
-<h2>FAQ contatti e telefono</h2>
-<dl class="faq">
-<dt>Come posso fissare un appuntamento?</dt>
-<dd>Invia una email a <a href="mailto:daniele.checcarelli@libero.it">daniele.checcarelli@libero.it</a>. Non fornisco un numero telefonico su questo sito.</dd>
-</dl>
-</div>
-</section>
     <h2>Note legali e privacy</h2>
     <p class="small">
       Le informazioni presenti su questo sito hanno scopo informativo e non sostituiscono la valutazione medica, la diagnosi o il trattamento.
@@ -235,6 +227,8 @@ width="800" height="1000" loading="lazy" decoding="async">
     "alternateName": ["Daniele Checcarelli", "Dott. Daniele Checcarelli"],
     "jobTitle": "Medico Fisiatra",
     "email": "mailto:daniele.checcarelli@libero.it",
+    "url": "https://danielecheccarelli.it",
+    "image": "https://danielecheccarelli.it/images/ritratto.jpg",
     "knowsAbout": [
       "valutazione posturale",
       "deformità vertebrali",
@@ -286,6 +280,4 @@ width="800" height="1000" loading="lazy" decoding="async">
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
-
 </html>
-
