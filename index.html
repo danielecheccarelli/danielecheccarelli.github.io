@@ -21,8 +21,8 @@
 html,corpo{margine:0; imbottitura:0}
 corpo{famiglia-di caratteri:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif; colore:var(--testo); sfondo:var(--bg); altezza della linea:1.6}
 .contenitore{larghezza massima:1000px; margine:0 auto; imbottitura:0 20px}
-.skip-link{posizione:assoluta; Sinistra:-9999px}.skip-link:Messa a fuoco{sinistra:16px; in alto:16px; sfondo:#000; colore:#fff; imbottitura:8px 12px; raggio del bordo:6px; z-index:1000}
-/*Intestazione*/
+.skip-link{posizione:assoluta; A sinistra:-9999px}
+.skip-link:focus{sinistra:16px; in alto:16px; sfondo:#000; colore:#fff; imbottitura:8px 12px; raggio del bordo:6px; z-index:1000} /* Intestazione */
 .site-header{posizione:appiccicoso; in alto:0; sfondo:#fff; bordo-inferiore:1px solido var(--bordo); z-index:10}
 .intestazione-interno{visualizzazione:flessione; allineare-elementi:centro; giustificare-contenuto:spazio-tra; imbottitura:14px 0}
 .brand-title{visualizzazione:blocco; peso del carattere:700}
@@ -30,16 +30,19 @@ corpo{famiglia-di caratteri:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"
 .nav{stile-elenco:nessuno; margine:0; imbottitura:0; Schermo:Flessione; Spazio:18px}
 .nav a{decorazione del testo:nessuno; colore:var(--testo)}
 .nav a:hover{colore:var(--primario)}
+
 /*Eroe*/
 .hero{sfondo:gradiente-lineare(135 gradi,#eaf2ff 0%,#ffffff 60%); imbottitura: 56px, 0, 40px; bordo-inferiore:1px solido var(--border)}
 .hero h1{dimensione del carattere:2rem; margine:0 0 10px}
 .lead{dimensione del carattere:1.1rem; colore:var(--muted); larghezza massima:800px}
+
 /*Sezioni*/
 .section{imbottitura:44px 0}
 .section.alt{sfondo:var(--superficie)}
 h2{margine:0 0 14px; dimensione del carattere:1.5rem}
 .check{imbottitura sinistra:18px}
 .check li{margine:8px 0}
+
 /*Carte*/
 .carte{visualizzazione:griglia; grid-template-columns:repeat(12,1fr); spazio:16px}
 .card{colonna-griglia:estensione 12; sfondo:#fff; bordo:1px solido var(--border); raggio del bordo:12px; imbottitura:18px; scatola-ombra:var(--ombra)}
@@ -47,22 +50,26 @@ h2{margine:0 0 14px; dimensione del carattere:1.5rem}
 .place{colore:var(--muted); margine:0 0 10px}
 .link{colore:var(--primario); decorazione del testo:nessuno}
 .link:hover{decorazione-testo:sottolineare}
+
 /* Note legali e piè di pagina */
 .legale .small{dimensione del carattere:0.9rem; colore:var(--muted)}
 .site-footer{bordo-superiore:1px solido var(--bordo); imbottitura:16px 0; sfondo:#fff}
 .site-footer p{margine:0; colore:var(--muted)}
-/* Immagini responsive */
+
+/*Immagini*/
 img{larghezza massima:100%; altezza:auto}
-/* Evita che le ancore finiscano sotto l'header sticky */
+
+/* Ancoraggi sotto l'intestazione adesiva */
 sezione[id], h2 { margine-scorrimento-superiore: 80px; }
-/* Header mobile: evita sovrapposizioni */
+
+/* Intestazione mobile */
 html { -webkit-text-size-adjust: 100%; }
 @media (larghezza massima: 640px){
 .site-header .header-inner{ imbottitura:10px 0; }
 .header-inner{ flex-wrap: avvolgimento; spazio:8px; allineamento-elementi:flex-start; }
 .brand{ flex:1 1 100%; }
 .brand-title{ dimensione del carattere:1.05rem; altezza della riga:1.25; }
-.brand-subtitle{ dimensione del carattere:0.9rEm; altezza della linea:1.25; margine-superiore:2px; }
+.brand-subtitle{ dimensione del carattere:0.9rem; altezza della riga:1.25; margin-top:2px; }
 nav{ larghezza:100%; }
 .nav{
 flex-wrap: avvolgere;
@@ -77,7 +84,8 @@ padding-left: max(20px, env(area sicura-inset-left));
 padding-right: max(20px, env(area sicura-inset-right));
 }
 }
-/* Layout hero con foto a destra */
+
+/* Layout eroe con foto a destra */
 .hero .hero-flex{
 visualizzazione:griglia; colonne-modello-griglia:1fr; allineare-elementi:centro; spazio:16px;
 }
@@ -94,10 +102,10 @@ raggio del bordo:12px; bordo:1px solido var(--border); scatola-ombra:var(--ombra
 .hero-photo img{ larghezza:160px; }
 }
 </stile>
+
 </capo>
 <corpo>
-<a class="salta link" href="#contenuto">Salta al contenuto</a>
-<header class="site-header">
+<a class="skip-link" href="#contenuto">Salta al contenuto</a> <header class="site-header">
 <div class="contenitore header-inner">
 <div class="marchio">
 <span class="titolo-marca">Dott. Daniele Checcarelli Petrucci</span>
@@ -112,8 +120,7 @@ raggio del bordo:12px; bordo:1px solido var(--border); scatola-ombra:var(--ombra
 </ul>
 </navigatore>
 </div>
-</intestazione>
-<main id="contenuto">
+</header> <main id="contenuto">
 <section class="eroe">
 <div class="contenitore">
 <div class="eroe-flex">
@@ -130,8 +137,7 @@ width="800" height="1000" loading="lazy" decoding="async">
 </figura>
 </div>
 </div>
-</sezione>
-<section id="chi-sono" class="section">
+</section> <section id="chi-sono" class="section">
 <div class="contenitore">
 <h2>Chi sono</h2>
 <p>
@@ -139,6 +145,7 @@ Ho conseguito la specializzazione in Medicina Fisica e Riabilitazione nel 2007 p
 </p>
 </div>
 </sezione>
+
 <section id="competenze" class="section alt">
 <div class="contenitore">
 <h2>Aree di competenza</h2>
@@ -153,6 +160,7 @@ Ho conseguito la specializzazione in Medicina Fisica e Riabilitazione nel 2007 p
 </ul>
 </div>
 </sezione>
+
 <section id="studi" class="section">
 <div class="contenitore">
 <h2>Studi medici</h2>
@@ -175,6 +183,7 @@ Ho conseguito la specializzazione in Medicina Fisica e Riabilitazione nel 2007 p
 </div>
 </div>
 </sezione>
+
 <section id="contatti" class="section alt">
 <div class="contenitore">
 <h2>Contatti</h2>
@@ -182,6 +191,7 @@ Ho conseguito la specializzazione in Medicina Fisica e Riabilitazione nel 2007 p
 <p>Non fornisco un numero telefonico su questo sito.</p>
 </div>
 </sezione>
+
 <section class="sezione legale">
 <div class="contenitore">
 <h2>Note legali e privacy</h2>
@@ -191,15 +201,13 @@ Le informazioni presenti su questo sito hanno scopo informativo e non sostituisc
 <p class="piccolo">
 Privacy: questo sito non utilizza cookie, non effettua tracciamenti e non presenta moduli. Contattandomi via email potresti comunicare dati personali: invia solo le informazioni essenziali. Titolare del trattamento: Dott. Daniele Checcarelli Petrucci – Contatto: daniele.checcarelli@libero.it.
 </p>
-<p class="piccolol">Ultimo aggiornamento: <time datetime="2025-10-05">5 ottobre 2025</time></p>
+<p class="small">Ultimo aggiornamento: <time datetime="2025-10-05">5 ottobre 2025</time></p>
 </div>
-</sezione> </principale>
-<footer class="piè di pagina del sito">
+</section> </main> <footer class="piè di pagina del sito">
 <div class="contenitore">
 <p> © <span id="year"></span> Dott. Daniele Checcarelli Petrucci</p>
 </div>
-</piè di pagina>
-<tipo di script="applicazione/ld+json">
+</footer> <script type="application/ld+json">
 {
 "@context": "https://schema.org",
 "@type": "Persona",
@@ -209,7 +217,7 @@ Privacy: questo sito non utilizza cookie, non effettua tracciamenti e non presen
 "e-mail": "mailto:daniele.checcarelli@libero.it",
 "url": "https://danielecheccarelli.it",
 "image": "https://danielecheccarelli.it/images/ritratto.jpg",
-"conosce": [
+"knowsAbout": [
 "valutazione posturale",
 "deformità vertebrali",
 "algie vertebrali",
@@ -254,13 +262,12 @@ Privacy: questo sito non utilizza cookie, non effettua tracciamenti e non presen
 }
 ]
 }
-</sceneggiatura>
-<sceneggiatura>
+</script> <script>
 Nessun tracciamento: aggiorna solo l'anno nel footer
 document.getElementById('anno').textContent = nuova Data().getFullYear();
-</sceneggiatura>
-</corpo>
+</script> </corpo>
 </html>
+
 
 
 
