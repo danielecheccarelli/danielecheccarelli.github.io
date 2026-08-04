@@ -8,8 +8,7 @@
 
 <meta name="description" content="Valutazione fisiatrica della scoliosi in età pediatrica, nei bambini e negli adolescenti a Foligno e in Umbria. Dott. Daniele Checcarelli Petrucci, specialista in Medicina Fisica e Riabilitativa.">
 
-<!-- Versione di prova: la pagina non viene indicizzata finché non sarà collegata al sito -->
-<meta name="robots" content="noindex,nofollow">
+<meta name="robots" content="index,follow">
 
 <link rel="canonical" href="https://danielecheccarelli.it/scoliosi-foligno-umbria.html">
 
@@ -168,6 +167,7 @@ p{
 
 .medical-illustration{
   display:flex;
+  flex-direction:column;
   justify-content:center;
   align-items:center;
   margin:26px 0;
@@ -178,6 +178,13 @@ p{
   max-width:100%;
   height:auto;
   display:block;
+}
+
+.medical-illustration figcaption{
+  margin-top:8px;
+  font-size:0.9rem;
+  color:var(--muted);
+  text-align:center;
 }
 
 .breadcrumb{
@@ -363,10 +370,10 @@ html{
     alla fase di crescita e alle caratteristiche cliniche del paziente.
   </p>
 
-  <div class="medical-illustration">
+  <figure class="medical-illustration">
     <svg viewBox="0 0 360 240" role="img" aria-labelledby="scoliosi-title scoliosi-desc" xmlns="http://www.w3.org/2000/svg">
       <title id="scoliosi-title">Confronto tra colonna normale e scoliosi</title>
-      <desc id="scoliosi-desc">Disegno schematico con una colonna normale a sinistra e una colonna con deviazione laterale a destra.</desc>
+      <desc id="scoliosi-desc">Disegno schematico con una colonna normale a sinistra e una scoliosi con curva toracica destra e curva lombare sinistra a destra.</desc>
 
       <rect x="1" y="1" width="358" height="238" rx="18" fill="#f6f8fa" stroke="#e5e7eb"/>
 
@@ -375,8 +382,10 @@ html{
 
       <line x1="180" y1="42" x2="180" y2="215" stroke="#e5e7eb" stroke-width="2"/>
 
+      <!-- Colonna normale: linea di riferimento -->
       <line x1="90" y1="45" x2="90" y2="205" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 5"/>
 
+      <!-- Colonna normale -->
       <path d="M90 50
                C88 72, 92 92, 90 112
                C88 132, 92 152, 90 172
@@ -398,11 +407,18 @@ html{
         <circle cx="90" cy="205" r="7"/>
       </g>
 
+      <!-- Colonna con scoliosi: linea di riferimento -->
       <line x1="270" y1="45" x2="270" y2="205" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 5"/>
 
+      <!-- 
+        Colonna con scoliosi vista da dietro:
+        curva toracica destra nella parte superiore,
+        curva lombare sinistra nella parte inferiore.
+        Ampiezza delle curve ridotta rispetto alla versione precedente.
+      -->
       <path d="M270 50
-               C236 75, 236 105, 270 125
-               C302 145, 299 178, 258 205"
+               C293 75, 293 105, 270 125
+               C249 145, 249 178, 270 205"
             fill="none"
             stroke="#1b6eea"
             stroke-width="7"
@@ -410,17 +426,19 @@ html{
 
       <g fill="#ffffff" stroke="#1b6eea" stroke-width="2">
         <circle cx="270" cy="50" r="7"/>
-        <circle cx="250" cy="70" r="7"/>
-        <circle cx="241" cy="93" r="7"/>
-        <circle cx="248" cy="113" r="7"/>
+        <circle cx="283" cy="70" r="7"/>
+        <circle cx="289" cy="93" r="7"/>
+        <circle cx="285" cy="113" r="7"/>
         <circle cx="270" cy="125" r="7"/>
-        <circle cx="290" cy="145" r="7"/>
-        <circle cx="296" cy="168" r="7"/>
-        <circle cx="281" cy="190" r="7"/>
-        <circle cx="258" cy="205" r="7"/>
+        <circle cx="257" cy="145" r="7"/>
+        <circle cx="253" cy="168" r="7"/>
+        <circle cx="258" cy="190" r="7"/>
+        <circle cx="270" cy="205" r="7"/>
       </g>
     </svg>
-  </div>
+
+    <figcaption>colonna vertebrale vista da dietro</figcaption>
+  </figure>
 
   <div class="notice">
     <p>
@@ -581,7 +599,7 @@ html{
   </p>
 
   <p class="small">
-    Ultimo aggiornamento: <time datetime="2026-04-20">20 aprile 2026</time>
+    Ultimo aggiornamento: <time datetime="2026-08-04">4 agosto 2026</time>
   </p>
 </div>
 </section>
