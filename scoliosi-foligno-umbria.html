@@ -7,6 +7,7 @@
 <title>Scoliosi a Foligno e in Umbria | Dott. Daniele Checcarelli Petrucci</title>
 
 <meta name="description" content="Valutazione fisiatrica della scoliosi in età pediatrica, nei bambini e negli adolescenti a Foligno e in Umbria. Dott. Daniele Checcarelli Petrucci, specialista in Medicina Fisica e Riabilitativa.">
+
 <meta name="robots" content="index,follow">
 
 <link rel="canonical" href="https://danielecheccarelli.it/scoliosi-foligno-umbria.html">
@@ -28,44 +29,133 @@
   --border:#e5e7eb;
   --shadow:0 4px 20px rgba(0,0,0,0.06);
 }
+
 *{box-sizing:border-box}
-html,body{margin:0;padding:0}
+
+html,body{
+  margin:0;
+  padding:0;
+}
+
 body{
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
   color:var(--text);
   background:var(--bg);
   line-height:1.6;
 }
-.container{max-width:1000px;margin:0 auto;padding:0 20px}
-.skip-link{position:absolute;left:-9999px}
-.skip-link:focus{
-  left:16px;top:16px;background:#000;color:#fff;
-  padding:8px 12px;border-radius:6px;z-index:1000;
+
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:0 20px;
 }
 
-.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--border);z-index:10}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.brand-title{display:block;font-weight:700}
-.brand-subtitle{display:block;color:var(--muted);font-size:0.95rem}
-.nav{list-style:none;margin:0;padding:0;display:flex;gap:18px}
-.nav a{text-decoration:none;color:var(--text)}
-.nav a:hover{color:var(--primary)}
+.skip-link{
+  position:absolute;
+  left:-9999px;
+}
 
+.skip-link:focus{
+  left:16px;
+  top:16px;
+  background:#000;
+  color:#fff;
+  padding:8px 12px;
+  border-radius:6px;
+  z-index:1000;
+}
+
+/* Header */
+.site-header{
+  position:sticky;
+  top:0;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  z-index:10;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+}
+
+.brand-title{
+  display:block;
+  font-weight:700;
+}
+
+.brand-subtitle{
+  display:block;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+.nav{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:18px;
+}
+
+.nav a{
+  text-decoration:none;
+  color:var(--text);
+}
+
+.nav a:hover{
+  color:var(--primary);
+}
+
+/* Hero */
 .hero{
   background:linear-gradient(135deg,#eaf2ff 0%,#ffffff 60%);
   padding:56px 0 40px;
   border-bottom:1px solid var(--border);
 }
-.hero h1{font-size:2rem;margin:0 0 10px}
-.lead{font-size:1.1rem;color:var(--muted);max-width:820px}
 
-.section{padding:44px 0}
-.section.alt{background:var(--surface)}
-h2{margin:0 0 14px;font-size:1.5rem}
-h3{margin-top:22px}
-p{margin-top:0}
-.check{padding-left:18px}
-.check li{margin:8px 0}
+.hero h1{
+  font-size:2rem;
+  margin:0 0 10px;
+}
+
+.lead{
+  font-size:1.1rem;
+  color:var(--muted);
+  max-width:820px;
+}
+
+/* Sections */
+.section{
+  padding:44px 0;
+}
+
+.section.alt{
+  background:var(--surface);
+}
+
+h2{
+  margin:0 0 14px;
+  font-size:1.5rem;
+}
+
+h3{
+  margin-top:22px;
+}
+
+p{
+  margin-top:0;
+}
+
+.check{
+  padding-left:18px;
+}
+
+.check li{
+  margin:8px 0;
+}
 
 .notice{
   border-left:4px solid var(--primary);
@@ -82,12 +172,14 @@ p{margin-top:0}
   align-items:center;
   margin:26px 0;
 }
+
 .medical-illustration svg{
   width:340px;
   max-width:100%;
   height:auto;
   display:block;
 }
+
 .medical-illustration figcaption{
   margin-top:8px;
   font-size:0.9rem;
@@ -95,17 +187,37 @@ p{margin-top:0}
   text-align:center;
 }
 
-.breadcrumb{font-size:0.95rem;color:var(--muted);margin-bottom:16px}
-.breadcrumb a{color:var(--primary);text-decoration:none}
-.breadcrumb a:hover{text-decoration:underline}
-.link{color:var(--primary);text-decoration:none}
-.link:hover{text-decoration:underline}
+.breadcrumb{
+  font-size:0.95rem;
+  color:var(--muted);
+  margin-bottom:16px;
+}
 
+.breadcrumb a{
+  color:var(--primary);
+  text-decoration:none;
+}
+
+.breadcrumb a:hover{
+  text-decoration:underline;
+}
+
+.link{
+  color:var(--primary);
+  text-decoration:none;
+}
+
+.link:hover{
+  text-decoration:underline;
+}
+
+/* Cards FAQ */
 .cards{
   display:grid;
   grid-template-columns:repeat(12,1fr);
   gap:16px;
 }
+
 .card{
   grid-column:span 12;
   background:#fff;
@@ -114,23 +226,72 @@ p{margin-top:0}
   padding:18px;
   box-shadow:var(--shadow);
 }
-.card h3{margin:0 0 6px}
-.small{font-size:0.9rem;color:var(--muted)}
 
-.site-footer{border-top:1px solid var(--border);padding:16px 0;background:#fff}
-.site-footer p{margin:0;color:var(--muted)}
+.card h3{
+  margin:0 0 6px;
+}
 
-img{max-width:100%;height:auto}
-section[id], h2{scroll-margin-top:80px}
-html{-webkit-text-size-adjust:100%}
+.small{
+  font-size:0.9rem;
+  color:var(--muted);
+}
+
+/* Footer */
+.site-footer{
+  border-top:1px solid var(--border);
+  padding:16px 0;
+  background:#fff;
+}
+
+.site-footer p{
+  margin:0;
+  color:var(--muted);
+}
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+section[id], h2{
+  scroll-margin-top:80px;
+}
+
+/* Mobile */
+html{
+  -webkit-text-size-adjust:100%;
+}
 
 @media (max-width:640px){
-  .site-header .header-inner{padding:10px 0}
-  .header-inner{flex-wrap:wrap;gap:8px;align-items:flex-start}
-  .brand{flex:1 1 100%}
-  .brand-title{font-size:1.05rem;line-height:1.25}
-  .brand-subtitle{font-size:0.9rem;line-height:1.25;margin-top:2px}
-  nav{width:100%}
+  .site-header .header-inner{
+    padding:10px 0;
+  }
+
+  .header-inner{
+    flex-wrap:wrap;
+    gap:8px;
+    align-items:flex-start;
+  }
+
+  .brand{
+    flex:1 1 100%;
+  }
+
+  .brand-title{
+    font-size:1.05rem;
+    line-height:1.25;
+  }
+
+  .brand-subtitle{
+    font-size:0.9rem;
+    line-height:1.25;
+    margin-top:2px;
+  }
+
+  nav{
+    width:100%;
+  }
+
   .nav{
     flex-wrap:wrap;
     justify-content:flex-start;
@@ -138,7 +299,13 @@ html{-webkit-text-size-adjust:100%}
     padding-top:6px;
     border-top:1px solid var(--border);
   }
-  .nav a{font-size:0.95rem;padding:6px 0;display:inline-block}
+
+  .nav a{
+    font-size:0.95rem;
+    padding:6px 0;
+    display:inline-block;
+  }
+
   .site-header .container{
     padding-left:max(20px, env(safe-area-inset-left));
     padding-right:max(20px, env(safe-area-inset-right));
@@ -192,9 +359,10 @@ html{-webkit-text-size-adjust:100%}
   <h2>Valutazione della scoliosi</h2>
 
   <p>
-    La scoliosi è una deformità della colonna vertebrale caratterizzata da una deviazione sul piano frontale,
-    associata a una rotazione delle vertebre. Può comparire durante l’età evolutiva e, in molti casi,
-    viene osservata durante la crescita, in particolare nel periodo adolescenziale.
+    La scoliosi è una deformità tridimensionale della colonna vertebrale, caratterizzata da una deviazione sul piano
+    frontale, associata a una rotazione delle vertebre e a possibili modificazioni del profilo della colonna sul piano
+    sagittale. Può comparire durante l’età evolutiva e, in molti casi, viene osservata durante la crescita, in
+    particolare nel periodo adolescenziale.
   </p>
 
   <p>
@@ -215,8 +383,10 @@ html{-webkit-text-size-adjust:100%}
 
       <line x1="180" y1="42" x2="180" y2="215" stroke="#e5e7eb" stroke-width="2"/>
 
+      <!-- Colonna normale: linea di riferimento -->
       <line x1="90" y1="45" x2="90" y2="205" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 5"/>
 
+      <!-- Colonna normale -->
       <path d="M90 50
                C88 72, 92 92, 90 112
                C88 132, 92 152, 90 172
@@ -238,6 +408,7 @@ html{-webkit-text-size-adjust:100%}
         <circle cx="90" cy="205" r="7"/>
       </g>
 
+      <!-- Colonna con scoliosi: linea di riferimento -->
       <line x1="270" y1="45" x2="270" y2="205" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="5 5"/>
 
       <path d="M270 50
@@ -278,9 +449,10 @@ html{-webkit-text-size-adjust:100%}
   <h2>Scoliosi nei bambini e in età pediatrica</h2>
 
   <p>
-    Nei bambini e negli adolescenti la scoliosi richiede un inquadramento accurato, perché l’evoluzione della curva
-    può essere influenzata dalla crescita. Per questo motivo è importante valutare non solo la postura, ma anche
-    il grado di maturazione scheletrica, l’entità della curva e l’eventuale presenza di segni clinici associati.
+    Nei bambini e negli adolescenti la scoliosi richiede un inquadramento accurato, perché il rischio di evoluzione
+    della curva dipende anche dalla fase di crescita, dalla maturazione scheletrica e dall’entità della curva stessa.
+    Per questo motivo è importante valutare non solo la postura, ma anche il grado di maturazione scheletrica,
+    l’entità della curva e l’eventuale presenza di segni clinici associati.
   </p>
 
   <p>
@@ -308,13 +480,14 @@ html{-webkit-text-size-adjust:100%}
 
   <p>
     Il percorso dipende dal quadro clinico del singolo paziente. In generale, la valutazione fisiatrica prende in
-    considerazione la storia clinica, l’esame obiettivo, l’osservazione posturale, la mobilità della colonna e gli
-    eventuali esami radiografici già disponibili.
+    considerazione la storia clinica, l’età, la fase di crescita, l’esame obiettivo, l’osservazione posturale,
+    la mobilità della colonna e gli eventuali esami radiografici già disponibili.
   </p>
 
   <p>
-    Quando necessario, possono essere fornite indicazioni per il monitoraggio nel tempo, per un programma riabilitativo
-    mirato o per l’utilizzo di corsetti, secondo criteri clinici e in base alla fase di crescita.
+    Quando necessario, possono essere fornite indicazioni per il monitoraggio nel tempo, per esercizi specifici,
+    per un programma riabilitativo mirato o per l’utilizzo di corsetti, secondo criteri clinici e in base all’età,
+    alla fase di crescita e alle caratteristiche della curva.
   </p>
 
   <h3>Aree di interesse clinico</h3>
@@ -325,7 +498,7 @@ html{-webkit-text-size-adjust:100%}
     <li>Alterazioni posturali nei bambini e negli adolescenti.</li>
     <li>Patologie vertebrali in età pediatrica.</li>
     <li>Valutazione e prescrizione di corsetti quando indicato.</li>
-    <li>Riabilitazione conservativa delle patologie vertebrali.</li>
+    <li>Esercizi specifici e riabilitazione conservativa delle patologie vertebrali.</li>
   </ul>
 </div>
 </section>
@@ -402,6 +575,15 @@ html{-webkit-text-size-adjust:100%}
     </article>
 
     <article class="card">
+      <h3>La scoliosi provoca dolore?</h3>
+      <p>
+        No. La scoliosi in età evolutiva spesso non è associata a dolore. Tuttavia, in alcuni casi possono essere
+        presenti algie vertebrali, lombalgia, dorsalgia o cervicalgia. La presenza di dolore richiede una valutazione
+        clinica per distinguere le possibili cause e definire il percorso più appropriato.
+      </p>
+    </article>
+
+    <article class="card">
       <h3>La scoliosi riguarda solo i bambini?</h3>
       <p>
         La scoliosi viene spesso diagnosticata in età evolutiva, ma può essere valutata anche nell’adulto, soprattutto
@@ -420,6 +602,12 @@ html{-webkit-text-size-adjust:100%}
     Le informazioni presenti in questa pagina hanno scopo informativo e non sostituiscono la valutazione medica,
     la diagnosi o il trattamento. Ogni indicazione deve essere definita in base alla visita specialistica e al quadro
     clinico individuale.
+  </p>
+
+  <p class="small">
+    Contenuto redatto con taglio informativo e coerente con i principi generali della valutazione e del trattamento
+    conservativo delle deformità vertebrali in età evolutiva. Per informazioni divulgative sulle patologie vertebrali
+    è possibile consultare anche le risorse dell’Istituto Scientifico Italiano Colonna Vertebrale, ISICO.
   </p>
 
   <p class="small">
@@ -470,6 +658,7 @@ html{-webkit-text-size-adjust:100%}
       "deformità vertebrali",
       "patologie della colonna vertebrale",
       "valutazione posturale",
+      "esercizi specifici per scoliosi",
       "corsetti",
       "riabilitazione conservativa delle patologie vertebrali"
     ],
@@ -514,6 +703,14 @@ html{-webkit-text-size-adjust:100%}
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "No. Una postura scorretta o un atteggiamento asimmetrico non corrispondono necessariamente a una scoliosi strutturata. La visita specialistica serve anche a distinguere le diverse condizioni."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "La scoliosi provoca dolore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. La scoliosi in età evolutiva spesso non è associata a dolore. Tuttavia, in alcuni casi possono essere presenti algie vertebrali, lombalgia, dorsalgia o cervicalgia. La presenza di dolore richiede una valutazione clinica per distinguere le possibili cause e definire il percorso più appropriato."
       }
     },
     {
