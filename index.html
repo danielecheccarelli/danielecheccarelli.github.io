@@ -3,21 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Dott. Daniele Checcarelli Petrucci (Fisiatra) | Foligno</title>
-
 <meta name="description" content="Dott. Daniele Checcarelli Petrucci, Medico Fisiatra a Foligno. Valutazione e trattamento delle patologie della colonna, scoliosi, ipercifosi, dorso curvo, algie vertebrali, riabilitazione ortopedica e sportiva.">
-
 <meta name="robots" content="index,follow">
-
 <meta property="og:title" content="Dott. Daniele Checcarelli Petrucci (Fisiatra)">
 <meta property="og:description" content="Fisiatra a Foligno. Valutazione e trattamento delle patologie vertebrali, scoliosi, ipercifosi, dorso curvo, ortesi e riabilitazione.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="it_IT">
 <meta property="og:url" content="https://danielecheccarelli.it/">
-
 <link rel="canonical" href="https://danielecheccarelli.it/">
-
 <style>
 :root{
   --bg:#ffffff;--text:#1b1f23;--muted:#5f6b76;
@@ -37,7 +31,7 @@ body{
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand-title{display:block;font-weight:700}
 .brand-subtitle{display:block;color:var(--muted);font-size:0.95rem}
-.nav{list-style:none;margin:0;padding:0;display:flex;gap:18px}
+.nav{list-style:none;margin:0;padding:0;display:flex;gap:18px;flex-wrap:wrap}
 .nav a{text-decoration:none;color:var(--text)}
 .nav a:hover{color:var(--primary)}
 .hero{background:linear-gradient(135deg,#eaf2ff 0%,#ffffff 60%);padding:56px 0 40px;border-bottom:1px solid var(--border)}
@@ -63,6 +57,21 @@ h2{margin:0 0 14px;font-size:1.5rem}
 img{max-width:100%;height:auto}
 section[id], h2 { scroll-margin-top: 80px; }
 html { -webkit-text-size-adjust: 100%; }
+.hero .hero-flex{
+  display:grid; grid-template-columns:1fr; align-items:center; gap:16px;
+}
+.hero-photo img{
+  width:200px; max-width:40vw; height:auto;
+  border-radius:12px; border:1px solid var(--border); box-shadow:var(--shadow);
+}
+@media (min-width:720px){
+  .hero .hero-flex{ grid-template-columns:1.5fr 1fr; }
+  .hero-photo{ justify-self:end; }
+  .hero h1{ font-size:2.2rem; }
+}
+@media (min-width:1024px){
+  .hero-photo img{ width:160px; }
+}
 @media (max-width: 640px){
   .site-header .header-inner{ padding:10px 0; }
   .header-inner{ flex-wrap: wrap; gap:8px; align-items:flex-start; }
@@ -83,27 +92,10 @@ html { -webkit-text-size-adjust: 100%; }
     padding-right: max(20px, env(safe-area-inset-right));
   }
 }
-.hero .hero-flex{
-  display:grid; grid-template-columns:1fr; align-items:center; gap:16px;
-}
-.hero-photo img{
-  width:200px; max-width:40vw; height:auto;
-  border-radius:12px; border:1px solid var(--border); box-shadow:var(--shadow);
-}
-@media (min-width:720px){
-  .hero .hero-flex{ grid-template-columns:1.5fr 1fr; }
-  .hero-photo{ justify-self:end; }
-  .hero h1{ font-size:2.2rem; }
-}
-@media (min-width:1024px){
-  .hero-photo img{ width:160px; }
-}
 </style>
 </head>
-
 <body>
 <a class="skip-link" href="#contenuto">Salta al contenuto</a>
-
 <header class="site-header">
 <div class="container header-inner">
   <div class="brand">
@@ -116,20 +108,21 @@ html { -webkit-text-size-adjust: 100%; }
       <li><a href="#competenze">Aree di competenza</a></li>
       <li><a href="#per-appuntamenti">Per appuntamenti</a></li>
       <li><a href="#contatti">Contatti</a></li>
+      <li><a href="#approfondimenti">Approfondimenti</a></li>
     </ul>
   </nav>
 </div>
 </header>
-
 <main id="contenuto">
-
 <section class="hero">
 <div class="container">
   <div class="hero-flex">
     <div class="hero-text">
       <h1>Medico Fisiatra a Foligno</h1>
       <p class="lead">
-        Valutazione e trattamento delle patologie della colonna e delle algie vertebrali in età pediatrica e negli adulti, riabilitazione ortopedica e sportiva.
+        Valutazione e trattamento delle patologie della colonna, delle algie vertebrali e delle deformità vertebrali
+        in età pediatrica, nei bambini, negli adolescenti e negli adulti, con particolare attenzione a postura,
+        scoliosi, dorso curvo, mal di schiena e riabilitazione ortopedica e sportiva.
       </p>
     </div>
     <figure class="hero-photo">
@@ -140,41 +133,32 @@ html { -webkit-text-size-adjust: 100%; }
   </div>
 </div>
 </section>
-
 <section id="chi-sono" class="section">
 <div class="container">
   <h2>Chi sono</h2>
-
   <p>
     Ho conseguito la specializzazione in Medicina Fisica e Riabilitazione nel 2007 presso l’Università degli Studi di Perugia. Durante la formazione ho effettuato un tirocinio negli Stati Uniti d’America (ricerca in laboratorio di biomeccanica) e in Svezia (riabilitazione delle patologie da sport).
   </p>
-
   <p>
     Ho ricoperto il ruolo di medico sociale di squadre di pallavolo di serie A (Rpa, Despar, Sir Safety Perugia) per 13 anni e di medico della squadra nazionale femminile di tennis in Fed Cup dal 2014 al 2017. Sono stato componente della commissione medica della Federazione Italiana Tennis (FIT) dal 2016 al 2020. Ho collaborato come consulente con squadre di alto livello, come il Manchester United e la nazionale di calcio dell'Algeria, come esperto di laserterapia multifrequenza per il trattamento delle patologie sportive.
   </p>
-
   <p>
     Mi occupo da molti anni di pazienti affetti da algie del rachide e patologie vertebrali; nel 2018 ho conseguito il Master dell'Istituto Scientifico Italiano Colonna Vertebrale (ISICO) di Milano in riabilitazione dei pazienti affetti da deformità vertebrali e nel 2019 il Master internazionale ISICO “Principles and practice of scoliosis conservative treatment. Who, how, when and why to treat”.
   </p>
-
   <p>
     Sono dirigente medico fisiatra presso l’USL Umbria 2 dove, dal 2015, sono referente del primo ambulatorio aziendale e regionale dedicato alla scoliosi e alle altre patologie vertebrali in età pediatrica.
   </p>
-
   <p>
     Ho contribuito allo sviluppo di dispositivi per magnetoterapia e laserterapia occupandomi degli aspetti medici, scientifici e dei protocolli terapeutici. Dal 2022 sono componente di commissioni mediche per il riconoscimento dell'invalidità civile, dell'handicap e della disabilità. Sono iscritto all'albo dei consulenti tecnici d'ufficio (CTU) del Tribunale di Perugia. Sono stato relatore in numerosi congressi nazionali ed internazionali.
   </p>
-
   <p>
     Ricevo su appuntamento presso l’Ospedale S. Giovanni Battista di Foligno.
   </p>
 </div>
 </section>
-
 <section id="competenze" class="section alt">
 <div class="container">
   <h2>Aree di competenza</h2>
-
   <ul class="check">
     <li>Valutazione posturale</li>
     <li>Scoliosi, dorso curvo (ipercifosi) e altre patologie della colonna vertebrale in età pediatrica e negli adulti</li>
@@ -188,14 +172,33 @@ html { -webkit-text-size-adjust: 100%; }
     <li>Valutazioni funzionali e certificazioni per invalidità civile, Legge 104, Legge 68, rinnovo patente</li>
     <li>Relazioni cliniche e certificazioni per infortuni per finalità assicurative e con rilievo medico‑legale</li>
   </ul>
+</div>
+</section>
 
+<section id="approfondimenti" class="section">
+<div class="container">
+  <h2>Approfondimenti</h2>
   <p>
-    Approfondimenti:<br>
     <a class="link" href="/scoliosi-foligno-umbria.html">
       valutazione della scoliosi in età pediatrica a Foligno e in Umbria
-    </a><br>
+    </a>
+  </p>
+
+  <p>
     <a class="link" href="/ipercifosi-dorso-curvo-foligno-umbria.html">
       valutazione dell’ipercifosi (dorso curvo) in età pediatrica a Foligno e in Umbria
+    </a>
+  </p>
+
+  <p>
+    <a class="link" href="/mal-di-schiena-foligno-umbria.html">
+      mal di schiena a Foligno e in Umbria
+    </a>
+  </p>
+
+  <p>
+    <a class="link" href="/spondilolisi-spondilolistesi-foligno-umbria.html">
+      spondilolisi e spondilolistesi a Foligno e in Umbria
     </a>
   </p>
 </div>
@@ -207,38 +210,30 @@ html { -webkit-text-size-adjust: 100%; }
   <p>Contattare il numero <strong>0742 3397799</strong> dal lunedì al venerdì dalle 8.30 alle 16.</p>
 </div>
 </section>
-
 <section id="contatti" class="section alt">
 <div class="container">
   <h2>Contatti</h2>
   <p>Email: <a href="mailto:daniele.checcarelli@libero.it">daniele.checcarelli@libero.it</a></p>
 </div>
 </section>
-
 <section class="section legal">
 <div class="container">
   <h2>Note legali e privacy</h2>
-
   <p class="small">
     Le informazioni presenti su questo sito hanno scopo informativo e non sostituiscono la valutazione medica, la diagnosi o il trattamento.
   </p>
-
   <p class="small">
     Privacy: questo sito non utilizza cookie, non effettua tracciamenti e non presenta moduli. Contattandomi via email potresti comunicare dati personali: invia solo le informazioni essenziali. Titolare del trattamento: Dott. Daniele Checcarelli Petrucci – Contatto: daniele.checcarelli@libero.it.
   </p>
-
   <p class="small">Ultimo aggiornamento: <time datetime="2026-08-04">4 agosto 2026</time></p>
 </div>
 </section>
-
 </main>
-
 <footer class="site-footer">
 <div class="container">
   <p>© <span id="year"></span> Dott. Daniele Checcarelli Petrucci</p>
 </div>
 </footer>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -287,10 +282,8 @@ html { -webkit-text-size-adjust: 100%; }
   }
 }
 </script>
-
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
